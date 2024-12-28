@@ -2,9 +2,13 @@ import express from 'express'
 import mongoose from "mongoose"
 import Item from "../models/item.model"
 
-app.get('/api/cart', async (req, res) => {
-    res.status(200).json( {message: "We are getting the cart items successfully!"} );
-});
+export default function handler(req, res) {
+    return res.json({ message: `We are inside our cart api!`})
+}
+
+// app.get('/api/cart', async (req, res) => {
+//     res.status(200).json( {message: "We are getting the cart items successfully!"} );
+// });
 
 // module.exports = async (req, res) => {
 
