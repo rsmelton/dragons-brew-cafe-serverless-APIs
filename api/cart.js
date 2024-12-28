@@ -4,7 +4,7 @@ import Item from "../models/item.model"
 import { VercelRequest, VercelResponse } from '@vercel/node'
 
 export default function handler(VercelRequest, VercelResponse) {
-    return res.json({ message: `We are inside our cart api!`})
+    return VercelResponse.json({ message: `We are inside our cart api!`})
 }
 
 // app.get('/api/cart', async (req, res) => {
