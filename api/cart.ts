@@ -3,9 +3,16 @@ import mongoose from "mongoose"
 import Item from "../models/item.model"
 import { VercelRequest, VercelResponse } from '@vercel/node'
 
-export default function handler(VercelRequest, VercelResponse) {
-    return VercelResponse.json({ message: `We are inside our cart api!`})
+export default function handler(req: VercelRequest, res: VercelResponse) {
+  const { name = 'World' } = req.query
+  return res.json({
+    message: `Hello ${name}!`,
+  })
 }
+
+// export default function handler(VercelRequest, VercelResponse) {
+//     return VercelResponse.json({ message: `We are inside our cart api!`})
+// }
 
 // app.get('/api/cart', async (req, res) => {
 //     res.status(200).json( {message: "We are getting the cart items successfully!"} );
