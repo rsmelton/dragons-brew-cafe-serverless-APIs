@@ -3,7 +3,7 @@ import mongoose from "mongoose"
 import Item from "../models/item.model"
 
 app.get('https://dragons-brew-cafe-serverless-apis.vercel.app/api/cart', async (req, res) => {
-    res.send("We are getting the cart items successfully!");
+    res.status(200).json( {message: "We are getting the cart items successfully!"} );
 });
 
 module.exports = app
