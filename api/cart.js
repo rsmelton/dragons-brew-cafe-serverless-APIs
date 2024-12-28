@@ -7,6 +7,11 @@ import Item from "../models/item.model"
 // });
 
 module.exports = async (req, res) => {
+
+    res.setHeader('Access-Control-Allow-Origin', '*');  // Allow all origins (be more specific in production)
+    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, DELETE'); // Allowed HTTP methods
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');  // Allowed headers
+
     if (req.method === 'GET') {
         res.status(200).json( {message: "We are getting the cart items successfully!"} );
     }
