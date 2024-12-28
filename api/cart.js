@@ -1,8 +1,9 @@
 import express from 'express'
 import mongoose from "mongoose"
 import Item from "../models/item.model"
+import { VercelRequest, VercelResponse } from '@vercel/node'
 
-export default function handler(req, res) {
+export default function handler(VercelRequest, VercelResponse) {
     return res.json({ message: `We are inside our cart api!`})
 }
 
